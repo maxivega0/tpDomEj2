@@ -23,7 +23,64 @@
   </head>
   <body>
     <main>
-        
+        <section class="container">
+            <h1 class="text-center">Registro de personas</h1>
+            <form class="row" id="formulario">
+                <div class="row">
+                    <div class="mb-3 col-12 col-lg-6">
+                        <label for="nombreApellido" class="form-label fw-semibold">Nombre y Apellido: </label>
+                        <input id="nombreApellido" type="text" placeholder="Ej: Emiliano Martinez" required minlength="5" maxlength="150" class="form-control border border-danger border-1">
+                    </div>
+                    <div class="mb-3 col-12 col-lg-6">
+                        <label for="edades" class="form-label fw-semibold">Edad: </label>
+                        <input id="edades" type="number" placeholder="Ingrese su Edad" required minlength="1" maxlength="5" class="form-control border border-danger border-1">
+                    </div>
+                    <div class="mb-3 col-12 col-lg-6">
+                        <label for="documento" class="form-label fw-semibold">DNI: </label>
+                        <input id="documento" type="number" placeholder="Ej: 42877432" required minlength="4" maxlength="12" class="form-control border border-danger border-1">
+                    </div>
+                    <div class="mb-3 col-12 col-lg-6">
+                        <label for="peso" class="form-label fw-semibold">Peso: </label>
+                        <input id="peso" type="number" placeholder="Ej: 64.6" required minlength="2" maxlength="30" class="form-control border border-danger border-1">
+                    </div>
+                    <div class="mb-3 col-12 col-lg-6">
+                        <label for="altura" class="form-label fw-semibold">Altura en cm: </label>
+                        <input id="altura" type="number" placeholder="Ej: 175" required minlength="4" maxlength="256" class="form-control border border-danger border-1">
+                    </div>
+                    <div class="mb-3 col-12 col-lg-6">
+                        <label for="anio" class="form-label fw-semibold">Año de nacimiento: </label>
+                        <input id="anio" type="number" placeholder="Ej: 1999" required minlength="4" maxlength="256" class="form-control border border-danger border-1">
+                    </div>
+                    <div class="mb-3 col-12  d-flex flex-column">
+                        <label for="email" class="form-label fw-semibold">Sexo: </label>
+                        <p>
+                <select name="sexo" id="sexo" required class="form-select border border-danger border-1">
+                    <option value=""></option>
+                    <option value="Hombre">Hombre</option>
+                    <option value="Mujer">Mujer</option>
+                </select>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-outline-danger btn-lg mb-3 w-75" type="submit" id="formulario">
+                        Ingresar
+                      </button>
+                </div>
+            </form>
+        </section>
+        <section class="container mt-4">
+            <h2 class="text-center">Consultas</h2>
+            <article class="row">
+                <aside class="col-md-6 text-center" id="generacion">
+                    <h3>Consulte su generacion</h3>
+                    <button class="btn btn-outline-success btn-lg mb-3" id="mostrarGeneracion">Mostrar</button>
+                </aside>
+                <aside class="col-md-6 text-center" id="mostrarEdades">
+                    <h3>Clasificacion por edades</h3>
+                    <button class="btn btn-outline-success btn-lg mb-3" id="esMayor">Mostrar</button>
+                </aside>
+            </article>
+        </section>
     </main>
     <footer class="bg-dark text-light text-center py-4">
       <p>Todos los derechos reservados &copy;</p>
